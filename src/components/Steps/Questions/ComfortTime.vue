@@ -66,5 +66,12 @@ export default {
 };
 </script>
 <style>
-@import "../../../assets/styles/components/comfortTime.css";
+.step-title__comfort {
+  max-width: 510px;
+}
+@media (max-width: 550px) {
+  .step-title__comfort {
+    max-width: 288px;
+  }
+}
 </style>

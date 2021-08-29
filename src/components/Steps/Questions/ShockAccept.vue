@@ -76,5 +76,9 @@ export default {
 };
 </script>
 <style>
-@import "../../../assets/styles/components/ShockAccept.css";
+@media (max-width: 550px) {
+  .step-title__shock {
+    max-width: 302px;
+  }
+}
 </style>

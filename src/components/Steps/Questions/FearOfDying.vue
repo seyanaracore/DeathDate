@@ -67,5 +67,32 @@ export default {
 };
 </script>
 <style>
-@import "../../../assets/styles/components/fearOfDying.css";
+.quote_fearcomp {
+  margin-top: 86px;
+  margin-bottom: 92px;
+  max-width: 302px;
+}
+.step-container__fear {
+  margin-top: 133px;
+}
+.footer-container__fear {
+  display: none;
+}
+@media (max-width: 550px) {
+  .step-container__fear {
+    margin-top: 53px;
+  }
+  .footer-container__fear {
+    display: block;
+  }
+  .footer-container__fear > .footer-text {
+    font-size: 7px;
+    line-height: 9px;
+    bottom: 0;
+  }
+  .quote_fearcomp {
+    margin-top: 38px;
+    margin-bottom: 39px;
+  }
+}
 </style>

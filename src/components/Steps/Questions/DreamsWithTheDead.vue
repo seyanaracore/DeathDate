@@ -66,5 +66,9 @@ export default {
 };
 </script>
 <style>
-@import "../../../assets/styles/components/dreamsWithTheDead.css";
+@media (max-width: 550px) {
+  .step-title_dreams {
+    max-width: 223px;
+  }
+}
 </style>

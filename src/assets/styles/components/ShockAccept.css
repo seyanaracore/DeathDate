@@ -1,0 +1,47 @@
+.notifyBox {
+  width: 480px;
+  height: 164px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #ffffff;
+  border-radius: 5px;
+  margin-top: 54px;
+  margin-bottom: 18px;
+  opacity: 0;
+}
+.notifyBox::after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  border: 16px solid transparent;
+  border-bottom: 33px solid white;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  right: 35px;
+}
+.notifyMessage {
+  font-family: Bad Script;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: center;
+  color: #202024;
+  max-width: 90.7%;
+}
+.notifyBox-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.notifyBox-wrapper {
+  border-bottom: var(--bottomline);
+  width: var(--wrapperWidth);
+  display: flex;
+  justify-content: center;
+}
+.smoothEmergence {
+  animation: smoothEmergence linear 2.5s;
+  opacity: 1;
+}

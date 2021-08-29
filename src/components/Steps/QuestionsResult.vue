@@ -96,3 +96,6 @@ export default {
   },
 };
 </script>
+<style>
+@import "../../assets/styles/components/QuestionsResult.css";
+</style>

@@ -13,7 +13,7 @@
           <div class="astrologer-background"></div>
           <img
             class="astrologer-avatar"
-            src="../assets/astrologer_avatar.png"
+            src="../assets/images/astrologer_avatar.png"
             alt="Астролог"
           />
         </div>
@@ -37,7 +37,7 @@
         <div class="aside-opensecret">
           <img
             class="aside-opensecret__image"
-            src="../assets/aside_hands.png"
+            src="../assets/images/aside_hands.png"
             alt=""
           />
           <p class="aside-opensecret_text involvementText">
@@ -88,14 +88,6 @@ export default {
   },
 };
 </script>
-<style scope>
+<style>
 @import "../assets/styles/main.css";
-@import "../assets/styles/components/steps.css";
-@import "../assets/styles/components/fearOfDying.css";
-@import "../assets/styles/components/DateOfBirth.css";
-@import "../assets/styles/components/loader-spinner.css";
-@import "../assets/styles/components/ShockAccept.css";
-@import "../assets/styles/components/loader-bar.css";
-@import "../assets/styles/components/QuestionsResult.css";
-@import "../assets/styles/mediarequests.css";
 </style>

@@ -9,12 +9,12 @@
       <div class="backround-items">
         <img
           class="background-items__eye1 background-items__eye1__slim"
-          src="../../../assets/background_eye-1.svg"
+          src="../../../assets/images/background_eye-1.svg"
           alt=""
         />
         <img
           class="background-items__eye2 background-items__eye2__slim"
-          src="../../../assets/background_eye-2.svg"
+          src="../../../assets/images/background_eye-2.svg"
           alt=""
         />
       </div>
@@ -65,3 +65,6 @@ export default {
   props: ["questionNumber"],
 };
 </script>
+<style>
+@import "../../../assets/styles/components/comfortTime.css";
+</style>

@@ -28,3 +28,6 @@ export default {
   },
 };
 </script>
+<style scope>
+@import "../../assets/styles/components/loader-spinner.css";
+</style>

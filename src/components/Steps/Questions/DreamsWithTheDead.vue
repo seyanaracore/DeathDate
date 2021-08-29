@@ -9,17 +9,17 @@
       <div class="backround-items">
         <img
           class="background-items__eye1 background-items__eye1__slim"
-          src="../../../assets/background_eye-1.svg"
+          src="../../../assets/images/background_eye-1.svg"
           alt=""
         />
         <img
           class="background-items__eye2 background-items__eye2__slim"
-          src="../../../assets/background_eye-2.svg"
+          src="../../../assets/images/background_eye-2.svg"
           alt=""
         />
       </div>
       <div class="step-title-block">
-        <p class="step-title step-title__comfort">
+        <p class="step-title step-title_dreams">
           {{ stepQuestion }}
         </p>
       </div>
@@ -65,3 +65,6 @@ export default {
   props: ["questionNumber"],
 };
 </script>
+<style>
+@import "../../../assets/styles/components/dreamsWithTheDead.css";
+</style>

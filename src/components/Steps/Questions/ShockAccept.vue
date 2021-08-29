@@ -2,7 +2,6 @@
   <div class="step-container">
     <div class="notifyBox-wrapper">
       <div class="notifyBox smoothEmergence">
-        <p class="notifyMessage_result"></p>
         <p v-if="age >= 18 && age < 36" class="notifyMessage">
           {{ forecast[0] }}
         </p>
@@ -18,12 +17,12 @@
       <div class="backround-items">
         <img
           class="background-items__eye1 background-items__eye1__slim"
-          src="../../../assets/background_eye-1.svg"
+          src="../../../assets/images/background_eye-1.svg"
           alt=""
         />
         <img
           class="background-items__eye2 background-items__eye2__slim"
-          src="../../../assets/background_eye-2.svg"
+          src="../../../assets/images/background_eye-2.svg"
           alt=""
         />
       </div>
@@ -39,8 +38,7 @@
             :key="button"
             @click="
               $eventBus.$emit('setStep', {
-                name: 'Loader',
-                loaderType: 'ProgressBar',
+                name: 'ProgressBar',
               })
             "
             class="input input_form input_button"
@@ -77,3 +75,6 @@ export default {
   props: ["questionNumber", "age"],
 };
 </script>
+<style>
+@import "../../../assets/styles/components/ShockAccept.css";
+</style>

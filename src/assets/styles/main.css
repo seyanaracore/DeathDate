@@ -1,29 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
 :root {
   --avatarBackground: 344px;
-  --wrapperWidth: 1440px;
 }
 .body-container {
   position: absolute;
-  background: top right url("../../assets/top_background.png") no-repeat;
+  background: top right url("../../assets/images/top_background.png") no-repeat;
   background-size: 100% 100%;
   width: 100%;
   height: 1098px;
   margin-top: -50px;
 }
 .wrapper {
-  max-width: var(--wrapperWidth);
+  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.article {
-  text-align: center;
-  letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 300;
-}
+
 .header_title {
   font-size: 16px;
   line-height: 19px;
@@ -37,7 +30,6 @@
   margin-top: 12px;
   margin-bottom: 64px;
 }
-
 main {
   display: flex;
   flex-direction: column;
@@ -59,7 +51,8 @@ main {
   width: inherit;
   opacity: 0.2;
   height: inherit;
-  background: center url("../../assets/astrologer_background.svg") no-repeat;
+  background: center url("../../assets/images/astrologer_background.svg")
+    no-repeat;
   background-size: var(--avatarBackground) var(--avatarBackground);
 }
 .main_question {
@@ -74,39 +67,6 @@ main {
 }
 .main_question__uppercase {
   text-transform: uppercase;
-}
-.input {
-  font-weight: normal;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  line-height: 23px;
-  border-radius: 50px;
-  position: relative;
-  margin-bottom: 35px;
-  height: 70px;
-  width: 316px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 1;
-}
-.input:hover {
-  cursor: pointer;
-}
-.input_button {
-  background: linear-gradient(
-    90deg,
-    rgba(246, 200, 102, 0.9) -6.2%,
-    rgba(254, 173, 53, 0.9) 100%
-  );
-  border: none;
-  color: white;
-  position: relative;
-}
-.input_button_title {
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 23px;
 }
 aside {
   display: flex;
@@ -164,7 +124,7 @@ aside {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../../assets/proveit_background.jpg") no-repeat;
+  background: url("../../assets/images/proveit_background.jpg") no-repeat;
   background-size: cover;
   opacity: 0.2;
   margin-top: -190px;
@@ -174,47 +134,78 @@ aside {
   margin: 0;
   max-width: 380px;
 }
-p {
-  margin: 0;
-}
 .template-container {
   overflow: hidden;
   position: relative;
 }
-@keyframes colorTransfusion {
-  from {
-    left: -10%;
+@media (max-width: 1000px) {
+  .aside-proveit-background-container {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding: 0 89px;
   }
-  to {
-    left: 60%;
-  }
-}
-@keyframes smoothEmergence {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+  .body-container {
+    width: 310%;
+    margin-left: -130%;
+    height: 50%;
+    margin-top: -50px;
   }
 }
-.colorTransfusion {
-  width: 50%;
-  left: -10%;
-  height: 100%;
-  position: absolute;
-  border-radius: 50px;
-  animation-delay: 0;
-  animation: colorTransfusion 1.9s linear infinite;
-  background: linear-gradient(
-    248.67deg,
-    rgba(255, 255, 255, 0) 33.32%,
-    rgba(255, 255, 255, 0.29) 48.54%,
-    rgba(255, 255, 255, 0) 66.52%
-  );
+@media (max-width: 550px) {
+  :root {
+    --avatarBackground: 199px;
+  }
+  .body-container {
+    height: 55%;
+  }
+  .header_title {
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 21px;
+    margin-bottom: 11px;
+  }
+  .header_forecast {
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 7px;
+    margin-bottom: 37px;
+  }
+  .astrologer-avatar {
+    width: 137px;
+    height: 137px;
+  }
+  .main_question {
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 13px;
+    margin-bottom: 30px;
+    width: 288px;
+  }
+  .aside-opensecret {
+    margin-top: 82px;
+    margin-bottom: 40px;
+    width: 255px;
+    height: 252px;
+  }
+  .aside-opensecret__image {
+    width: 78px;
+    height: 78px;
+    margin-top: -36.5px;
+  }
+  .aside-opensecret_text {
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 58px;
+  }
+  .aside-proveit-container {
+    height: 331px;
+  }
+  .aside-proveit-text {
+    font-size: 16px;
+    line-height: 25px;
+    width: 219px;
+  }
+  .main_article {
+    font-size: 12px;
+  }
 }
-/* .input:nth-child(2n) .colorTransfusion {
-  animation-delay: -0.1s;
-}
-.input:nth-child(3n) .colorTransfusion {
-  animation-delay: -0.4s;
-} */

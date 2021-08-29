@@ -2,11 +2,11 @@
   <div class="loader-container">
     <img
       class="microphone-image"
-      src="../../assets/microphone.svg"
+      src="../../assets/images/microphone.svg"
       alt="microphone"
     />
     <div class="myBar">
-      <div class="myProgress"></div>
+      <div ref="progress" class="myProgress"></div>
     </div>
     <p class="progressStatus">{{ progressStatus }}%</p>
     <p class="article qustionIndicator">Запись сообщения</p>
@@ -23,13 +23,12 @@ export default {
   },
   methods: {
     moveBar() {
-      let elem = document.querySelector(".myProgress");
       let id = setInterval(() => {
         if (this.progressStatus >= 100) {
           clearInterval(id);
         } else {
           this.progressStatus++;
-          elem.style.width = this.progressStatus + "%";
+          this.$refs.progress.style.width = this.progressStatus + "%";
         }
       }, 60);
     },
@@ -42,3 +41,6 @@ export default {
   },
 };
 </script>
+<style scope>
+@import "../../assets/styles/components/loader-bar.css";
+</style>

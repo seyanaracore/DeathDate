@@ -26,3 +26,8 @@
   height: 12.15%;
   margin-bottom: 39px;
 }
+@media (max-width: 550px) {
+  .myBar {
+    max-width: 259px;
+  }
+}

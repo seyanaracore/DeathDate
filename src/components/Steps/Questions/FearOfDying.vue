@@ -19,7 +19,7 @@
       <div class="quote-block">
         <img
           class="quote-rune-image"
-          src="../../../assets/rune1.svg"
+          src="../../../assets/images/rune1.svg"
           alt="Руна"
         />
         <p class="quote quote_fearcomp">
@@ -28,7 +28,7 @@
         </p>
         <img
           class="quote-rune-image"
-          src="../../../assets/rune2.svg"
+          src="../../../assets/images/rune2.svg"
           alt="Руна"
         />
       </div>
@@ -36,12 +36,12 @@
     <div class="backround-items">
       <img
         class="background-items__eye1"
-        src="../../../assets/background_eye-1.svg"
+        src="../../../assets/images/background_eye-1.svg"
         alt=""
       />
       <img
         class="background-items__eye2"
-        src="../../../assets/background_eye-2.svg"
+        src="../../../assets/images/background_eye-2.svg"
         alt=""
       />
     </div>
@@ -66,3 +66,6 @@ export default {
   props: ["questionNumber"],
 };
 </script>
+<style>
+@import "../../../assets/styles/components/fearOfDying.css";
+</style>

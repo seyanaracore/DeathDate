@@ -9,12 +9,12 @@
       <div class="backround-items">
         <img
           class="background-items__eye1 background-items__eye1__slim"
-          src="../../../assets/background_eye-1.svg"
+          src="../../../assets/images/background_eye-1.svg"
           alt=""
         />
         <img
           class="background-items__eye2 background-items__eye2__slim"
-          src="../../../assets/background_eye-2.svg"
+          src="../../../assets/images/background_eye-2.svg"
           alt=""
         />
       </div>
@@ -62,7 +62,7 @@
 </template>
 <script>
 //DayJS
-import { getNameMonth, getDaysInMonth, getActYear } from "../../dayJS";
+import { getNameMonth, getDaysInMonth, getActYear } from "../../../utils/dayJS";
 import dayInput from "./DateOfBirthInputs/dayInput.vue";
 import monthInput from "./DateOfBirthInputs/monthInput.vue";
 import yearInput from "./DateOfBirthInputs/yearInput.vue";
@@ -77,9 +77,9 @@ export default {
       year: "Год",
       monthsArray: [],
       inputsReject: { day: false, month: false, year: false },
-      stepQuestion: "Когда вы чувствуете себя наиболее комфортно?",
+      stepQuestion: "Укажите свою дату рождения:",
       quoteContent:
-        "Мы расскажем Вам не только подробности вашей смерти, но также поможем Вам избежать этой ужасной даты и продлить вашу жизнь на многие годы.",
+        "Уже совсем скоро Вы узнаете много интересного о своем будущем!",
     };
   },
   methods: {
@@ -140,14 +140,9 @@ export default {
       if (formComplete) {
         let age = this.calculateAge();
         this.$emit("setAge", age);
-        this.$eventBus.$emit(
-          "setStep",
-          {
-            name: "Loader",
-            loaderType: "RoundCicle",
-          },
-          "nextQuestion"
-        );
+        this.$eventBus.$emit("setStep", {
+          name: "Spinner",
+        });
       }
     },
     inputUnfocus(e) {
@@ -185,3 +180,6 @@ export default {
   },
 };
 </script>
+<style>
+@import "../../../assets/styles/components/DateOfBirth.css";
+</style>

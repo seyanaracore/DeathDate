@@ -1,7 +1,6 @@
 <template>
   <div>
     <component
-      :loaderType="loaderType"
       @setStep="setStep"
       :is="stepComp"
       :questionNumber="questionNumber"
@@ -19,7 +18,8 @@ import FearOfDying from "./Steps/Questions/FearOfDying.vue";
 import ShockAccept from "./Steps/Questions/ShockAccept.vue";
 import QuestionsResult from "./Steps/QuestionsResult.vue";
 
-import Loader from "./Loader.vue";
+import Spinner from "./LoaderTypes/Spinner.vue";
+import ProgressBar from "./LoaderTypes/ProgressBar.vue";
 
 export default {
   name: "Steps",
@@ -30,7 +30,8 @@ export default {
     FearOfDying,
     ShockAccept,
     QuestionsResult,
-    Loader,
+    Spinner,
+    ProgressBar,
   },
   data() {
     return {
@@ -41,12 +42,11 @@ export default {
     };
   },
   methods: {
-    setStep(step, nextQuestion) {
-      console.log(step);
-      if (nextQuestion) this.questionNumber++;
+    setStep(step) {
+      if (step.name != "ProgressBar" && step.name != "Spinner")
+        this.questionNumber++;
       if (!step) return;
       this.stepComp = step.name;
-      this.loaderType = step.loaderType || "";
     },
     setAge(age) {
       this.age = age;

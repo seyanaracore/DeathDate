@@ -280,6 +280,10 @@ p {
   line-height: 14px;
 }
 @media (max-width: 550px) {
+  .questionIndicator {
+    font-size: 12px;
+    line-height: 14px;
+  }
   .answers-button-block {
     margin-top: 40px;
   }
@@ -302,10 +306,6 @@ p {
   .quote-block {
     margin-top: 61px;
     margin-bottom: 97px;
-  }
-  .questionIndicator {
-    font-size: 12px;
-    line-height: 14px;
   }
   .background-items__eye1 {
     width: 83px;
